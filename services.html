@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Data Engineering Solutions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 20px 40px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 { margin: 0; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+
+    .content {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #003366;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card img {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+    .service-card h3 {
+      margin: 10px 0;
+      color: #003366;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <h1>Data Engineering Solutions</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="content">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <img src="https://img.icons8.com/fluency/100/data-configuration.png" alt="Data Pipeline">
+      <h3>Data Pipeline Development</h3>
+      <p>We design and build automated ETL/ELT pipelines to move, clean, and transform your data efficiently across systems.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://img.icons8.com/fluency/100/cloud-database.png" alt="Data Warehouse">
+      <h3>Cloud Data Warehousing</h3>
+      <p>Expertise in <b>AWS Redshift, Azure Synapse, and GCP BigQuery</b> to create scalable and high-performance data warehouses.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://img.icons8.com/fluency/100/bar-chart.png" alt="Power BI">
+      <h3>Business Intelligence</h3>
+      <p>Interactive dashboards and reports using <b>Power BI and Tableau</b> for smarter, data-driven decisions.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://img.icons8.com/fluency/100/database.png" alt="Database">
+      <h3>Database Design & Optimization</h3>
+      <p>We design efficient relational and NoSQL databases and optimize them for speed, reliability, and scalability.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/dataEntry.jpg" alt="Data Entry">
+      <h3>Data Entry & Cleaning</h3>
+      <p>Ensure accuracy and consistency with our <b>data entry, validation, and cleansing services</b> tailored for enterprises.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://img.icons8.com/fluency/100/artificial-intelligence.png" alt="Analytics">
+      <h3>Advanced Analytics</h3>
+      <p>Leverage predictive analytics, machine learning, and AI-driven insights to maximize the value of your data.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Data Engineering Solutions. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Engineering & Analytics Solutions</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #f9f9f9;
+      color: #000;
+    }
+
+    /* Navigation */
+    nav {
+      background: #003366;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 74px;
+    }
+    nav .logo { color: white; font-size: 22px; font-weight: bold; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover, nav ul li a.active { color: #f0c040; }
+
+    /* Hero */
+    header {
+      position: relative;
+      background: url('banner.jpg') center/cover no-repeat;
+      color: #000;
+      text-align: center;
+      padding: 150px 20px;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.7); /* light overlay for readability */
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.3em;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* Sections */
+    section { 
+      padding: 70px 10%; 
+    }
+    .section-title { 
+      text-align: center; 
+      font-size: 60px; 
+      margin-bottom: 40px; 
+      font-weight: bold;
+    }
+
+    /* Global Paragraph Styling */
+    p {
+      font-size: 18px; /* Increased for better readability */
+      line-height: 1.8;
+      color: #000;
+    }
+
+    /* Expertise Section */
+    .expertise { 
+      background: #eef4fb; 
+      border-radius: 10px; 
+      padding: 40px; 
+    }
+    .expertise p, .expertise ul { 
+      max-width: 1000px; 
+      margin: auto;  
+    }
+    .expertise ul {
+      list-style-type: none; 
+      padding: 20px; 
+      font-size: 18px; 
+      line-height: 1.8;
+    }
+
+    /* Mission & Vision Grid */
+    .grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 30px; 
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card img { 
+      width: 80%;     
+      height: 410px; 
+      border-radius: 8px; 
+      margin-bottom: 15px; 
+    }
+    .card h3 { 
+      font-size: 22px; 
+      margin-bottom: 10px; 
+    }
+
+    /* Footer */
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="logo">Data Engineering Solutions</div>
+  <ul style="size:10px;">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<header>
+  <h1 id="rotating-heading">Driving Smarter Decisions with Technology</h1>
+  <p>We deliver cutting-edge Data Engineering, Reporting, and Analytics solutions that transform raw data into powerful insights—driving smarter, faster business decisions.</p>
+</header>
+
+<script>
+  const headings = [
+    "Empowering Businesses Through Data Excellence",
+    "Transforming Data into Actionable Insights",
+    "Innovating with Analytics & AI",
+    "Driving Smarter Decisions with Technology"
+  ];
+  let index = 0;
+  const headingElement = document.getElementById("rotating-heading");
+  setInterval(() => {
+    index = (index + 1) % headings.length;
+    headingElement.style.opacity = 0;
+    setTimeout(() => {
+      headingElement.textContent = headings[index];
+      headingElement.style.opacity = 1;
+    }, 500);
+  }, 3000);
+</script>
+
+<!-- Industry Expertise -->
+<section class="expertise">
+  <h2 class="section-title">Industry Expertise</h2>
+  <p>
+    With <strong>6+ years of proven expertise</strong> in <strong>Data Warehousing</strong> and <strong>Data Analytics</strong>, 
+    we deliver <em>innovative, scalable, and business-driven</em> solutions for the <strong>Financial Services</strong> and <strong>IT</strong> sectors.
+  </p>
+  <ul>
+    <li>💾 <strong>Data Engineering & Migration</strong> – Expert in ETL processes using Power BI, SSRS, and Azure Data Factory (ADF).</li>
+    <li>🗄️ <strong>Database Management</strong> – Skilled in SQL, T-SQL, PL/SQL, SQL Server, Oracle DBMS.</li>
+    <li>📊 <strong>Business Intelligence & Reporting</strong> – Advanced reporting and stored procedure development.</li>
+    <li>⚡ <strong>Process Automation</strong> – Workflows with Power Automate & Power Apps.</li>
+    <li>🤖 <strong>AI-Powered Solutions</strong> – Python-based chatbot development with LangChain.</li>
+  </ul>
+</section>
+
+<!-- Mission & Vision -->
+<section>
+  <h2 class="section-title">Our Mission & Vision</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="images/mission.jpg" alt="Mission Icon">
+      <h3>Mission</h3>
+      <p>To empower organizations by transforming raw data into actionable insights that fuel growth and innovation.</p>
+    </div>
+    <div class="card">
+      <img src="images/vision.jpg" alt="Vision Icon">
+      <h3>Vision</h3>
+      <p>To be a trusted leader in data engineering and analytics, enabling data-driven success across industries.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+ <p style="color: white;">© 2025 Data Engineering Solutions | Contact: pardeepng64@gmail.com</p>
+
+</footer>
+
+</body>
+</html>

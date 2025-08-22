@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Data Engineering Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            line-height: 1.6;
+            background: #f9f9f9;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px 40px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav h1 { margin: 0; }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a.active {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .about-section img {
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .about-text {
+            flex: 1;
+        }
+        .team {
+            text-align: center;
+        }
+        .team h3 {
+            margin-bottom: 20px;
+        }
+        .team-members {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .member {
+            background: white;
+            padding: 20px;
+            width: 220px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .member img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <h1>Data Engineering Solutions</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="content">
+    <div class="about-section">
+        <img src="images/aboutUs.jpeg" alt="Data Engineering Solutions">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>At <b>Data Engineering Solutions</b>, we empower businesses to harness the full potential of their data. 
+            With years of expertise in <b>ETL pipelines, cloud platforms (AWS, Azure, GCP), and analytics systems</b>, 
+            we deliver scalable and reliable solutions that transform raw data into actionable insights.</p>
+            <p>Our mission is to simplify data management, ensure high data quality, and help organizations 
+            make smarter, data-driven decisions.</p>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="about-text">
+            <h2>What We Do</h2>
+            <ul>
+                <li>✔ Build robust <b>data pipelines</b> for seamless integration</li>
+                <li>✔ Develop <b>cloud-native data warehouses</b></li>
+                <li>✔ Optimize <b>big data processing</b> with Spark & Databricks</li>
+                <li>✔ Enable <b>real-time analytics & dashboards</b></li>
+                <li>✔ Provide <b>data governance & security</b> solutions</li>
+            </ul>
+        </div>
+        <img src="images/cloudData.jpg" alt="Cloud Data Solutions">
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2025 Data Engineering Solutions. All rights reserved.</p>
+</footer>
+</body>
+</html>
