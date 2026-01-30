@@ -80,6 +80,23 @@ a { text-decoration: none; color: inherit; }
   margin-top: 12px;
 }
 
+/* ===== BACK BUTTON ===== */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #e2e8f0;
+}
+
 /* ===== EMAIL SIDE INFO ===== */
 .contact-email {
   margin-top: 15px;
@@ -131,6 +148,12 @@ a { text-decoration: none; color: inherit; }
 
   <!-- FORM -->
   <div class="contact-form">
+
+    <!-- BACK BUTTON -->
+    <div class="back-btn" onclick="window.location.href='index.html'">
+      ← Back to Home
+    </div>
+
     <h2>Let’s Work Together</h2>
     <p class="subtitle">Quick discussion • No commitments</p>
 
