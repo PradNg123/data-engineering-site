@@ -1,179 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9;
-      line-height: 1.6;
-    }
-    header {
-      background: #003366;
-      color: white;
-      padding: 20px 40px;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav h1 { margin: 0; }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav ul li a.active {
-      text-decoration: underline;
-    }
+<meta charset="UTF-8">
+<title>Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #003366;
-    }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    /* Centering the contact form */
-    .contact-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: calc(100vh - 160px); /* adjust for header/footer */
-      padding: 20px;
-    }
-    .contact-container {
-      width: 100%;
-      max-width: 600px;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    label {
-      margin: 10px 0 5px;
-      font-weight: bold;
-      color: #003366;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-    textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-    button {
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      background: #003366;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #001f4d;
-    }
+<style>
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fb;
+  color: #111;
+}
 
-    #formMessage {
-      text-align: center;
-      margin-top: 15px;
-      color: green;
-      font-weight: bold;
-      display: none;
-    }
+a { text-decoration: none; color: inherit; }
 
-    footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-  </style>
+/* ===== CONTACT WRAPPER ===== */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== FORM ===== */
+.contact-form {
+  flex: 1 1 400px;
+  padding: 30px;
+}
+
+.contact-form h2 {
+  margin-top: 0;
+  color: #2563eb;
+}
+
+.contact-form .subtitle {
+  opacity: 0.7;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.contact-form button.btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.contact-form button.btn:hover {
+  background: #1e4bb8;
+}
+
+.contact-form .note {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 12px;
+}
+
+/* ===== EMAIL SIDE INFO ===== */
+.contact-email {
+  margin-top: 15px;
+  font-size: 14px;
+  background: #f1f5f9;
+  padding: 12px;
+  border-radius: 12px;
+  display: inline-block;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* ===== SUCCESS MESSAGE ===== */
+.success-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* ===== MAP ===== */
+.map {
+  flex: 1 1 400px;
+  min-height: 350px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+</style>
+
 </head>
+
 <body>
-<header>
-  <nav>
-    <h1>Contact Us</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html" class="active">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
 
 <div class="contact-wrapper">
-  <div class="contact-container">
-    <h2>Get in Touch</h2>
-    <form id="contactForm" action="https://formspree.io/f/xovlgdgr" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+  <!-- FORM -->
+  <div class="contact-form">
+    <h2>Let’s Work Together</h2>
+    <p class="subtitle">Quick discussion • No commitments</p>
 
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" required>
+    <!-- FORMSUBMIT -->
+    <form id="contactForm" action="https://formsubmit.co/pradeepng1988@outlook.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Briefly describe your requirement" rows="4" required></textarea>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
+      <!-- Optional redirect removed for AJAX -->
+      <input type="hidden" name="_captcha" value="false">
 
-      <button type="submit">Send Message</button>
+      <button class="btn" type="submit">Send Message</button>
     </form>
-    <div id="formMessage">✅ Thank you! We will contact you soon.</div>
+
+    <p class="note">No data stored • Confidential discussion</p>
+
+    <!-- EMAIL VISIBLE -->
+    <div class="contact-email">
+      Or email directly at: <a href="mailto:pradeepng1988@outlook.com">pradeepng1988@outlook.com</a>
+    </div>
+
+    <!-- SUCCESS MESSAGE -->
+    <div id="successMessage" class="success-message">
+      ✅ Message sent! I’ll get back to you soon.
+    </div>
+
   </div>
+
+  <!-- GOOGLE MAP -->
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=Dehradun%20Uttarakhand&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+
 </div>
 
-<footer>
-  <p>© 2025 Data Engineering Solutions. All rights reserved.</p>
-</footer>
-
+<!-- ===== AJAX SCRIPT ===== -->
 <script>
-  const form = document.getElementById("contactForm");
-  const messageDiv = document.getElementById("formMessage");
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // prevent page reload
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
+  const form = e.target;
+  const data = new FormData(form);
 
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        form.reset();
-        messageDiv.style.display = "block";
-      } else {
-        alert("Oops! Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      alert("Error! Please try again later.");
+  fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
     }
+  }).then(response => {
+    if (response.ok) {
+      document.getElementById("successMessage").style.display = "block";
+      form.reset();
+    } else {
+      alert("Oops! There was a problem. Please try again.");
+    }
+  }).catch(error => {
+    alert("Oops! There was a problem. Please try again.");
+    console.error(error);
   });
+});
 </script>
 
 </body>
